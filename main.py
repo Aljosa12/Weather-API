@@ -1,8 +1,14 @@
 from flask import Flask, render_template
 import requests
 from random import randint
+import os
 
 app = Flask(__name__)
+
+try:
+    API_KEY = os.environ["API_KEY"]
+except:
+    API_KEY = open("API_KEY.txt").read().strip()
 
 API_KEY = open("API_KEY.txt").read().strip()
 
