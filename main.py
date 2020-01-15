@@ -10,8 +10,6 @@ try:
 except:
     API_KEY = open("API_KEY.txt").read().strip()
 
-API_KEY = open("API_KEY.txt").read().strip()
-
 
 @app.route("/", methods=["GET"])
 def index():
